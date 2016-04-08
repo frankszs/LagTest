@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		C8767D371CB7226300838032 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8767D361CB7226300838032 /* main.m */; };
 		C8767D3A1CB7226300838032 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8767D391CB7226300838032 /* AppDelegate.m */; };
-		C8767D3D1CB7226300838032 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C8767D3C1CB7226300838032 /* GameScene.m */; };
-		C8767D3F1CB7226300838032 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C8767D3E1CB7226300838032 /* GameScene.sks */; };
 		C8767D421CB7226300838032 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8767D411CB7226300838032 /* GameViewController.m */; };
 		C8767D451CB7226300838032 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8767D431CB7226300838032 /* Main.storyboard */; };
 		C8767D471CB7226300838032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8767D461CB7226300838032 /* Assets.xcassets */; };
 		C8767D4A1CB7226300838032 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8767D481CB7226300838032 /* LaunchScreen.storyboard */; };
+		C8DF8A6C1CB82BE100FDFFA6 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C8DF8A6B1CB82BE100FDFFA6 /* GameScene.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +21,14 @@
 		C8767D361CB7226300838032 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C8767D381CB7226300838032 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C8767D391CB7226300838032 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C8767D3B1CB7226300838032 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
-		C8767D3C1CB7226300838032 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
-		C8767D3E1CB7226300838032 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		C8767D401CB7226300838032 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		C8767D411CB7226300838032 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		C8767D441CB7226300838032 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8767D461CB7226300838032 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8767D491CB7226300838032 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8767D4B1CB7226300838032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8DF8A6A1CB82BE100FDFFA6 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		C8DF8A6B1CB82BE100FDFFA6 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +63,11 @@
 			children = (
 				C8767D381CB7226300838032 /* AppDelegate.h */,
 				C8767D391CB7226300838032 /* AppDelegate.m */,
-				C8767D3B1CB7226300838032 /* GameScene.h */,
-				C8767D3C1CB7226300838032 /* GameScene.m */,
-				C8767D3E1CB7226300838032 /* GameScene.sks */,
 				C8767D401CB7226300838032 /* GameViewController.h */,
 				C8767D411CB7226300838032 /* GameViewController.m */,
 				C8767D431CB7226300838032 /* Main.storyboard */,
+				C8DF8A6A1CB82BE100FDFFA6 /* GameScene.h */,
+				C8DF8A6B1CB82BE100FDFFA6 /* GameScene.m */,
 				C8767D461CB7226300838032 /* Assets.xcassets */,
 				C8767D481CB7226300838032 /* LaunchScreen.storyboard */,
 				C8767D4B1CB7226300838032 /* Info.plist */,
@@ -118,6 +115,7 @@
 				TargetAttributes = {
 					C8767D311CB7226300838032 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = FVL67XJLZ2;
 					};
 				};
 			};
@@ -144,7 +142,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8767D3F1CB7226300838032 /* GameScene.sks in Resources */,
 				C8767D4A1CB7226300838032 /* LaunchScreen.storyboard in Resources */,
 				C8767D471CB7226300838032 /* Assets.xcassets in Resources */,
 				C8767D451CB7226300838032 /* Main.storyboard in Resources */,
@@ -160,7 +157,7 @@
 			files = (
 				C8767D421CB7226300838032 /* GameViewController.m in Sources */,
 				C8767D3A1CB7226300838032 /* AppDelegate.m in Sources */,
-				C8767D3D1CB7226300838032 /* GameScene.m in Sources */,
+				C8DF8A6C1CB82BE100FDFFA6 /* GameScene.m in Sources */,
 				C8767D371CB7226300838032 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,10 +272,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LagTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = frankszs.net.LagTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -286,10 +286,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LagTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = frankszs.net.LagTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -312,6 +315,7 @@
 				C8767D501CB7226300838032 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

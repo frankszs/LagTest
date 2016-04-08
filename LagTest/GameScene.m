@@ -8,42 +8,38 @@
 
 #import "GameScene.h"
 
+@interface GameScene ()
+
+@property (nonatomic, strong) SKNode *nodeContainer;
+@property (nonatomic, strong) SKSpriteNode *node;
+
+@property (nonatomic) CGPoint currentLocation;
+
+@end
+
 @implementation GameScene
 
--(void)didMoveToView:(SKView *)view {
-    /* Setup your scene here */
-    SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
+-(void)didMoveToView:(SKView *)view{
     
-    myLabel.text = @"Hello, World!";
-    myLabel.fontSize = 45;
-    myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                   CGRectGetMidY(self.frame));
+    self.anchorPoint = CGPointMake(0.5, 0.5);
     
-    [self addChild:myLabel];
+    self.nodeContainer = [SKNode node];
+    [self addChild:self.nodeContainer];
+    
+    self.node = [[SKSpriteNode alloc] initWithColor:[UIColor greenColor] size:CGSizeMake(50, 50)];
+    self.node.physicsBody = nil;
+    
+    [self.nodeContainer addChild:self.node];
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
+-(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.xScale = 0.5;
-        sprite.yScale = 0.5;
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
-    }
-}
-
--(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
+    UITouch *touch = [touches anyObject];
+    CGPoint location = [touch locationInNode:self];
+    
+    self.node.position = CGPointMake((self.node.position.x - (self.currentLocation.x-location.x)), self.node.position.y);
+    
+    self.currentLocation = location;
 }
 
 @end

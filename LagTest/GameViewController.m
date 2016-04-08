@@ -9,26 +9,38 @@
 #import "GameViewController.h"
 #import "GameScene.h"
 
+
+@interface GameViewController ()
+
+@property (nonatomic) BOOL gameCenterEnabled;
+
+@end
+
 @implementation GameViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Configure the view.
-    SKView * skView = (SKView *)self.view;
-    skView.showsFPS = YES;
-    skView.showsNodeCount = YES;
-    /* Sprite Kit applies additional optimizations to improve rendering performance */
-    skView.ignoresSiblingOrder = YES;
     
-    // Create and configure the scene.
-    GameScene *scene = [GameScene nodeWithFileNamed:@"GameScene"];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
-    
-    // Present the scene.
-    [skView presentScene:scene];
 }
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    
+    //Configure the view.
+    SKView * skView = (SKView *)self.view;
+    skView.ignoresSiblingOrder = YES;
+//    skView.multipleTouchEnabled = NO;
+    
+
+    GameScene *menuScene = [[GameScene alloc] initWithSize:skView.frame.size];
+    menuScene.scaleMode = SKSceneScaleModeAspectFill;
+
+    [skView presentScene:menuScene];
+    
+    
+}
+
 
 - (BOOL)shouldAutorotate
 {
