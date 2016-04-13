@@ -7,17 +7,18 @@
 //
 
 #import "GameScene.h"
+#import <os/activity.h>
+#import <os/trace.h>
 
 @interface GameScene ()
 
 @property (nonatomic, strong) SKNode *nodeContainer;
-@property (nonatomic, strong) SKSpriteNode *node;
-
-@property (nonatomic) CGPoint currentLocation;
 
 @end
 
 @implementation GameScene
+
+
 
 -(void)didMoveToView:(SKView *)view{
     
@@ -32,14 +33,14 @@
     [self.nodeContainer addChild:self.node];
 }
 
--(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+- (void)update:(NSTimeInterval)currentTime
+{
+    os_activity_t aid = os_activity_start("Update", OS_ACTIVITY_FLAG_DEFAULT);
+    os_trace("Update");
     
-    UITouch *touch = [touches anyObject];
-    CGPoint location = [touch locationInNode:self];
+    [super update:currentTime];
     
-    self.node.position = CGPointMake((self.node.position.x - (self.currentLocation.x-location.x)), self.node.position.y);
-    
-    self.currentLocation = location;
+    os_activity_end(aid);
 }
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C83079351CBDC53300F1EF3B /* SubClassedSKView.m in Sources */ = {isa = PBXBuildFile; fileRef = C83079341CBDC53300F1EF3B /* SubClassedSKView.m */; };
 		C8767D371CB7226300838032 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8767D361CB7226300838032 /* main.m */; };
 		C8767D3A1CB7226300838032 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8767D391CB7226300838032 /* AppDelegate.m */; };
 		C8767D421CB7226300838032 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8767D411CB7226300838032 /* GameViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C83079331CBDC53300F1EF3B /* SubClassedSKView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubClassedSKView.h; sourceTree = "<group>"; };
+		C83079341CBDC53300F1EF3B /* SubClassedSKView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubClassedSKView.m; sourceTree = "<group>"; };
 		C8767D321CB7226300838032 /* LagTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LagTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8767D361CB7226300838032 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C8767D381CB7226300838032 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				C8767D431CB7226300838032 /* Main.storyboard */,
 				C8DF8A6A1CB82BE100FDFFA6 /* GameScene.h */,
 				C8DF8A6B1CB82BE100FDFFA6 /* GameScene.m */,
+				C83079331CBDC53300F1EF3B /* SubClassedSKView.h */,
+				C83079341CBDC53300F1EF3B /* SubClassedSKView.m */,
 				C8767D461CB7226300838032 /* Assets.xcassets */,
 				C8767D481CB7226300838032 /* LaunchScreen.storyboard */,
 				C8767D4B1CB7226300838032 /* Info.plist */,
@@ -158,6 +163,7 @@
 				C8767D421CB7226300838032 /* GameViewController.m in Sources */,
 				C8767D3A1CB7226300838032 /* AppDelegate.m in Sources */,
 				C8DF8A6C1CB82BE100FDFFA6 /* GameScene.m in Sources */,
+				C83079351CBDC53300F1EF3B /* SubClassedSKView.m in Sources */,
 				C8767D371CB7226300838032 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,10 +281,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LagTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = frankszs.net.LagTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos9.3;
 			};
 			name = Debug;
 		};
@@ -289,10 +297,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LagTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = frankszs.net.LagTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SDKROOT = iphoneos9.3;
 			};
 			name = Release;
 		};

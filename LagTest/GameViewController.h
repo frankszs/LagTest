@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
+@class GameScene;
+
 @interface GameViewController : UIViewController
+
 
 @end

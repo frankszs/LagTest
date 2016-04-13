@@ -8,11 +8,13 @@
 
 #import "GameViewController.h"
 #import "GameScene.h"
-
+#import "SubClassedSKView.h"
 
 @interface GameViewController ()
 
 @property (nonatomic) BOOL gameCenterEnabled;
+
+@property (nonatomic, strong) SubClassedSKView *skView;
 
 @end
 
@@ -22,22 +24,22 @@
 {
     [super viewDidLoad];
     
+    self.skView = [[SubClassedSKView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:self.skView];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    
-    
-    //Configure the view.
-    SKView * skView = (SKView *)self.view;
-    skView.ignoresSiblingOrder = YES;
-//    skView.multipleTouchEnabled = NO;
+
+    self.skView.ignoresSiblingOrder = YES;
+    self.skView.multipleTouchEnabled = NO;
     
 
-    GameScene *menuScene = [[GameScene alloc] initWithSize:skView.frame.size];
-    menuScene.scaleMode = SKSceneScaleModeAspectFill;
-
-    [skView presentScene:menuScene];
+    GameScene *gameScene = [[GameScene alloc] initWithSize:self.skView.frame.size];
+    gameScene.scaleMode = SKSceneScaleModeAspectFill;
     
+    self.skView.gameScene = gameScene;
+    [self.skView presentScene:gameScene];
     
 }
 
