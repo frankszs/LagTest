@@ -13,6 +13,10 @@
 @interface GameScene ()
 
 @property (nonatomic, strong) SKNode *nodeContainer;
+@property (nonatomic, strong) SKSpriteNode *node;
+
+@property (nonatomic) CGPoint currentLocation;
+@property (nonatomic) CGPoint nodePosition;
 
 @end
 
@@ -33,14 +37,36 @@
     [self.nodeContainer addChild:self.node];
 }
 
-- (void)update:(NSTimeInterval)currentTime
-{
-    os_activity_t aid = os_activity_start("Update", OS_ACTIVITY_FLAG_DEFAULT);
-    os_trace("Update");
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    [super update:currentTime];
+    [self setNodePositionWithTouches:touches];
     
-    os_activity_end(aid);
 }
+
+-(void)touchesMoved:(NSSet<UITouch*>*)touches withEvent:(UIEvent *)event{
+    
+    [self setNodePositionWithTouches:touches];
+    
+}
+
+-(void)setNodePositionWithTouches:(NSSet<UITouch*>*)touches {
+    
+    UITouch *touch = [touches anyObject];
+    
+    CGPoint location = [touch locationInNode:self];
+    
+    self.nodePosition = CGPointMake((self.node.position.x - (self.currentLocation.x-location.x)), self.node.position.y);
+    
+    self.currentLocation = location;
+    
+}
+
+-(void)update:(NSTimeInterval)currentTime {
+    
+    self.node.position = self.nodePosition;
+    
+}
+
+
 
 @end

@@ -10,9 +10,5 @@
 
 @interface GameScene : SKScene
 
-@property (nonatomic, strong) SKSpriteNode *node;
-
-@property (nonatomic) CGPoint currentLocation;
-@property (nonatomic) CGPoint nodePosition;
 
 @end
